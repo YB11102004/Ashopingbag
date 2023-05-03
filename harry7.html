@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        h1{
+            color:white;
+        }
+        .formdesign {
+            font-size: 22px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:white;
+        }
+        .formdesign input {
+            font-size: 16px;
+            width: 30%;
+            padding: 5px 5px;
+            border: 2px solid rgb(199, 238, 7);
+            margin: 15px;
+            border-radius: 4px;
+        }
+        .formerror {
+            color: red;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .selection{
+            font-size: 22px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .selection label{
+            padding:5px 5px;
+            margin:5px;
+            font-size: 22px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .button{
+            border-radius: 8px;
+            height:40px;
+            width:80px;
+            font-size: 18px;
+            margin:20px 10px;
+            border: 2px solid white;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        label{
+            color: white;
+        }
+    </style>
+</head>
+
+<body bgcolor="black">
+    <h1 align="center">Login</h1>
+    <hr size="4" color=hotpink>
+    <form action>
+        <div class="formdesign" id="fname">
+            Enter name:<input type="text" name="fname" placeholder=" First Name"><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="email">
+          E-mail address:<input type="email " name="email" placeholder="E-mail address"><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="pass">
+             Password:<input type="password" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="phone">
+         Mobile number:<input type="tel" name="phone" placeholder="Mobile number" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" required><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="Age">
+           Enter Age:<input type="number" name="Age" placeholder="Age"><span class="formerror"></span>
+       </div>
+        <div class="selection">
+            Select your gender:
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="Others" name="gender" value="Others">
+            <label for="Others">Others</label>
+            </div>
+        <center>
+            <button onclick="myf()">Submit</button>
+        </center>
+    </form>
+<script>
+            function myf(){
+            alert("Your data stored successfully in our data base");
+            }
+            function ValidateEmail(email) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (email.value.match(mailormat)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        } 
+</script>
+</body>
+</html>
